@@ -1,0 +1,161 @@
+//dom basics plus methods
+
+document.getElementById
+
+
+        document.getElementById('title')
+            <h1 id=​"title" class=​"heading">​DOM Learning ​</h1>​
+
+        document.getElementById('title').id
+            'title'
+        
+        document.getElementById('title').class
+            undefined
+        
+        document.getElementById('title').className
+            'heading'
+        
+        document.getElementById('title').getAttribute
+            ƒ getAttribute() { [native code] }
+        
+        document.getElementById('title').getAttribute('id')
+            'title'
+        
+        document.getElementById('title').getAttribute('class')
+            'heading'
+        
+        document.getElementById('title').setAttribute('class','test')
+            undefined
+        
+        const a = document.getElementById('title')
+            undefined
+        
+        a
+            <h1 id=​"title" class=​"test">​DOM Learning ​</h1>​
+        
+        a.style.backgroundColor="Green"
+            'Green'
+
+
+const a = document.getElementById('para')
+    undefined
+
+a.innerText
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Non mollitia pariatur quibusdam dolor dignissimos quos accusantium, 
+    rem facilis exercitationem ipsa incidunt eligendi quia. 
+    Animi doloribus perspiciatis eligendi incidunt nihil laborum!'
+
+a.innerHTML
+    '\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Non mollitia pariatur quibusdam dolor dignissimos quos accusantium, 
+    rem facilis exercitationem ipsa incidunt eligendi quia. 
+    Animi doloribus perspiciatis eligendi incidunt nihil laborum!
+    \n        <span style="display:none">Hello Js</span>\n        '
+
+a.textContent
+    '\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Non mollitia pariatur quibusdam dolor dignissimos quos accusantium, 
+    rem facilis exercitationem ipsa incidunt eligendi quia. 
+    Animi doloribus perspiciatis eligendi incidunt nihil laborum!
+    \n        Hello Js\n        '
+
+document.getElementsByClassName("heading")
+    HTMLCollection [h1#title.heading, title: h1#title.heading]
+    0
+    : 
+    h1#title.heading
+    title
+    : 
+    h1#title.heading
+    length
+    : 
+    1
+    [[Prototype]]
+    : 
+    HTMLCollection
+
+
+document.querySelector('h1')
+    <h1 id=​"title" class=​"heading">​DOM Learning ​</h1>​
+
+document.querySelector('#title2')
+    <h1 id=​"title2" class=​"heading2">​DOM Practise ​</h1>​
+
+document.querySelector(".heading2")
+    <h1 id=​"title2" class=​"heading2">​DOM Practise ​</h1>​
+
+document.querySelector("input")
+    <input type=​"password">​
+
+document.querySelector('input[type="password"]')
+    <input type=​"password">​
+
+document.querySelector('p')
+    <p id=​"para">​…​</p>​" Lorem ipsum dolor sit amet consectetur adipisicing elit. Non mollitia pariatur quibusdam dolor dignissimos quos accusantium, rem facilis exercitationem ipsa incidunt eligendi quia. Animi doloribus perspiciatis eligendi incidunt nihil laborum! "<span style=​"display:​none">​Hello Js​</span>​</p>​
+
+document.querySelector('div')
+    <div>​…​</div>​
+
+document.querySelector('li')
+    <li class=​"mylist" style=​"color:​ blue;​ background-color:​ red;​">​::marker​"one"</li>​
+
+document.querySelector('li').style.color="blue"
+    'blue'
+
+const myul = document.querySelector('ul')
+    undefined
+
+myul.style.color="blue"
+    'blue'
+
+green = myul.querySelector('li')
+    <li class=​"mylist" style=​"color:​ blue;​">​…​</li>​
+
+green.style.backgroundColorColor="red"
+    'red'
+
+green.style.backgroundColor="red"
+    'red'
+
+green.innerText=7
+    7
+
+document.querySelectorAll('li')
+    NodeList(4) [li.mylist, li.mylist, li.mylist, li.mylist]
+
+const aa = document.querySelectorAll('li')
+    undefined
+
+aa
+    NodeList(4) [li.mylist, li.mylist, li.mylist, li.mylist]
+
+aa[1].style.backgroundColor="Red"
+    'Red'
+
+const aa = document.querySelectorAll('h1')
+    undefined
+
+aa
+    NodeList(2) [h1#title.heading, h1#title2.heading2]
+
+aa.forEach((item)=>{
+    item.style.backgroundColor = "RED"
+})
+    undefined
+
+// how to use forEach in ClassName Selector
+
+document.getElementsByClassName("mylist")
+    HTMLCollection(4) [li.mylist, li.mylist, li.mylist, li.mylist]
+
+const bb = document.getElementsByClassName("mylist")
+    undefined
+
+const arrybb = Array.from(bb)
+    undefined
+
+arrybb.forEach((items)=>{
+    items.style.backgroundColor="Pink"
+})
+    undefined
