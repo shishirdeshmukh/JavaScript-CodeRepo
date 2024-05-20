@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Frosty Frajile</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+
+
+    <script>    
+
+
+//setinterval
+        // setInterval(()=>{
+        //     console.log("hello",Date.now());
+        // },2000)
+
+        // const saydate = (str)=>{
+        //     console.log(str,"hello",Date.now());
+        // }
+
+        // const sett= setInterval(saydate,2000,"hi")
+
+        
+       // clearInterval(sett)
+
+        let a ;
+       saytext = ()=>{
+        console.log("hello js");
+       }
+
+        document.querySelector('#start').addEventListener('click',()=>{
+            a = setInterval(saytext, 2000);
+        })
+
+        document.querySelector('#stop').addEventListener('click',()=>{
+            console.log("stopped");
+            clearInterval(a);
+        })
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMl Events</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li>
+                <img width="200px" id="photoshop" src="https://1.bp.blogspot.com/-CQROWKmm7c0/Xohuu9IpcbI/AAAAAAAAAAM/JbyCQhu9-2UE-Xm0ZHNX7gi4iBSk_HDyQCLcBGAsYHQ/s1600/Screenshot_176.png"
+                alt="Photoshop">
+            </li>
+            <li>
+                <img width="200px" id="japan" src="https://media.cntraveler.com/photos/58d2b8bb1021b64be0979496/master/pass/nachi-shrine-japan-GettyImages-640039952.jpg"
+                alt="japan">
+            </li>
+            <li>
+                <img width="200px" id="river" src="https://th.bing.com/th/id/OIP.CChREnlZEnoE1p58K9OwowHaEK?rs=1&pid=ImgDetMain"
+                alt="river">
+            </li>
+            <li>
+                <img width="200px" id="owl" src="https://th.bing.com/th/id/OIP.xkANQRpSg8BQP7V66d9gswHaE8?w=262&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                alt="owl">
+            </li>
+            <li><a href="https://google.com" id="google">Google</a></a></li>
+        </ul>
+    </div>
+
+
+    
+    <script>
+       //in js events are run sequentially 
+    //     document.getElementById('owl').onclick = ()=>{
+    //     alert("owl")
+    //    }
+
+    // document.getElementById('images').addEventListener('click' , (e)=>{
+    //     console.log("hello ul");
+    // },false)
+
+    // //type ,timestamp ,defaultPrevented ,target ,toElement ,srcElement ,currentarget
+    // //clientX , clientY ,ScreenX ,screenY
+    // //altkey , ctrlkey , shiftkey , keycode
+
+    // document.getElementById('owl').addEventListener('click' , (e)=>{
+    //     console.log("hello owl");
+    //     e.stopPropagation()
+        
+    // },false)
+
+    // document.getElementById('google').addEventListener('click' , (e)=>{
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log("hello google");
+        
+        
+    // },false)
+
+
+
+    const li = document.querySelector('#images').addEventListener("click" , (e)=>{
+        console.log(e.target.parentNode)
+
+        if (e.target.tagName == 'IMG') {
+            console.log(e.target.id);
+            const remo = e.target.parentNode.remove()
+        }
+        
+        
+    //    const remo1 = e.target.parentNode
+    //     remo1.remove()
+
+
+
+    },false)
+    </script>
+</body>
+</html>

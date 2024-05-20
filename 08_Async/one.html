@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Shishir Deshmukh</h1>
+    <button id="stop">Stop</button>
+
+
+    <script>
+        // setTimeout(()=>{
+        //     console.log("hi");
+        // },2000)
+
+        const saymyname = ()=>{
+            console.log("hi");
+        }
+       // setTimeout(saymyname,2000)
+
+       const changetext = ()=>{
+        document.querySelector('h1').innerHTML="Frosty"
+       }
+       const set = setTimeout(changetext,2000)
+
+       document.querySelector('#stop').addEventListener('click',()=>{
+       clearTimeout(set)
+        console.log("stop");
+
+       })
+
+       
+
+
+//setinterval
+        // setInterval(()=>{
+        //     console.log("hello");
+        // },2000)
+
+    </script>
+</body>
+</html>
