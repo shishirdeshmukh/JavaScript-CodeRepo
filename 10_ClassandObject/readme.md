@@ -7,7 +7,9 @@
 -toLoweCase , Promises etc
 
 ## Why Use OOP
--
+- Reusability
 
 ## Parts of OOP
 -object literal
+
+- constructor function
